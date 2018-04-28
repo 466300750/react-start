@@ -1,15 +1,12 @@
 import React, {Component} from 'react'
-import styles from './Note.less'
+import styles from './NoteItem.less'
 
-class Note extends Component {
+class NoteItem extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        if (!this.props.isSubmitted) {
-            return null;
-        }
         const title = this.props.title;
         const text = this.props.text;
         return <article className={styles.article}>
@@ -19,4 +16,4 @@ class Note extends Component {
     }
 }
 
-export default Note;
+export default NoteItem;

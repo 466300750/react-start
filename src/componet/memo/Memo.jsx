@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Pad from "./Pad/Pad";
-import Note from "./Note/Note";
+import NoteList from "./Note/NoteList";
 
 class Memo extends Component {
     constructor(props) {
@@ -8,7 +8,7 @@ class Memo extends Component {
         this.handleNoteTitleChanged = this.handleNoteTitleChanged.bind(this);
         this.handleNoteTextChanged = this.handleNoteTextChanged.bind(this);
         this.handleNoteCreated = this.handleNoteCreated.bind(this);
-        this.state = {title:'', text:'', isSubmitted: false};
+        this.state = {title:'', text:'', noteItems: []};
     }
 
     handleNoteTitleChanged(tiltle) {
@@ -20,18 +20,21 @@ class Memo extends Component {
     }
 
     handleNoteCreated(e) {
-        this.setState({isSubmitted: true});
+        const noteItem = {title: this.state.title, text: this.state.text};
+        this.state.noteItems.push(noteItem);
+        this.setState({noteItems: this.state.noteItems});
     }
 
     render() {
         const title = this.state.title;
         const text = this.state.text;
-        const isSubmitted = this.state.isSubmitted;
+        const noteItems = this.state.noteItems;
+
         return <div>
             <Pad onTitleChanged={this.handleNoteTitleChanged}
                  onTextChanged={this.handleNoteTextChanged}
                  onNoteCreated={this.handleNoteCreated}/>
-            <Note title={title} text={text} isSubmitted={isSubmitted}/>
+            <NoteList noteItems={noteItems}/>
         </div>
     }
 }

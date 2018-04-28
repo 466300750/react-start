@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({16:[function(require,module,exports) {
+})({12:[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -168,7 +168,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 	return to;
 };
-},{}],14:[function(require,module,exports) {
+},{}],13:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -222,7 +222,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-},{}],19:[function(require,module,exports) {
+},{}],14:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -277,7 +277,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-},{}],10:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 /** @license React v16.3.2
  * react.production.min.js
  *
@@ -390,7 +390,7 @@ var W = { Children: { map: function (a, b, e) {
   }, isValidElement: M, version: "16.3.2", __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: { ReactCurrentOwner: I, assign: m } },
     X = Object.freeze({ default: W }),
     Y = X && W || X;module.exports = Y["default"] ? Y["default"] : Y;
-},{"object-assign":16,"fbjs/lib/invariant":14,"fbjs/lib/emptyObject":19,"fbjs/lib/emptyFunction":15}],21:[function(require,module,exports) {
+},{"object-assign":12,"fbjs/lib/invariant":13,"fbjs/lib/emptyObject":14,"fbjs/lib/emptyFunction":15}],17:[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -453,7 +453,7 @@ if ('development' !== 'production') {
 }
 
 module.exports = warning;
-},{"./emptyFunction":15}],30:[function(require,module,exports) {
+},{"./emptyFunction":15}],27:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -467,7 +467,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],24:[function(require,module,exports) {
+},{}],21:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -527,7 +527,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 }
 
 module.exports = checkPropTypes;
-},{"fbjs/lib/invariant":14,"fbjs/lib/warning":21,"./lib/ReactPropTypesSecret":30}],11:[function(require,module,exports) {
+},{"fbjs/lib/invariant":13,"fbjs/lib/warning":17,"./lib/ReactPropTypesSecret":27}],9:[function(require,module,exports) {
 /** @license React v16.3.2
  * react.development.js
  *
@@ -1936,7 +1936,7 @@ if ('development' !== "production") {
     module.exports = react;
   })();
 }
-},{"object-assign":16,"fbjs/lib/invariant":14,"fbjs/lib/emptyObject":19,"fbjs/lib/warning":21,"fbjs/lib/emptyFunction":15,"prop-types/checkPropTypes":24}],7:[function(require,module,exports) {
+},{"object-assign":12,"fbjs/lib/invariant":13,"fbjs/lib/emptyObject":14,"fbjs/lib/warning":17,"fbjs/lib/emptyFunction":15,"prop-types/checkPropTypes":21}],4:[function(require,module,exports) {
 'use strict';
 
 if ('development' === 'production') {
@@ -1944,7 +1944,7 @@ if ('development' === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.production.min.js":10,"./cjs/react.development.js":11}],13:[function(require,module,exports) {
+},{"./cjs/react.production.min.js":8,"./cjs/react.development.js":9}],18:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1978,7 +1978,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],17:[function(require,module,exports) {
+},{}],19:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2081,7 +2081,7 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-},{}],33:[function(require,module,exports) {
+},{}],34:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2104,7 +2104,7 @@ function isNode(object) {
 }
 
 module.exports = isNode;
-},{}],27:[function(require,module,exports) {
+},{}],28:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2127,7 +2127,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":33}],18:[function(require,module,exports) {
+},{"./isNode":34}],22:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2165,7 +2165,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":27}],5:[function(require,module,exports) {
+},{"./isTextNode":28}],10:[function(require,module,exports) {
 /** @license React v16.3.2
  * react-dom.production.min.js
  *
@@ -2413,7 +2413,7 @@ var Gg={createPortal:Fg,findDOMNode:function(a){return null==a?null:1===a.nodeTy
 null})}),!0):!1},unstable_createPortal:function(){return Fg.apply(void 0,arguments)},unstable_batchedUpdates:X.batchedUpdates,unstable_deferredUpdates:X.deferredUpdates,flushSync:X.flushSync,unstable_flushControlled:X.flushControlled,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{EventPluginHub:Ra,EventPluginRegistry:Ca,EventPropagators:kb,ReactControlledComponent:$b,ReactDOMComponentTree:bb,ReactDOMEventListener:$d},unstable_createRoot:function(a,b){return new tg(a,!0,null!=b&&!0===b.hydrate)}};
 X.injectIntoDevTools({findFiberByHostInstance:Ua,bundleType:0,version:"16.3.2",rendererPackageName:"react-dom"});var Hg=Object.freeze({default:Gg}),Ig=Hg&&Gg||Hg;module.exports=Ig["default"]?Ig["default"]:Ig;
 
-},{"fbjs/lib/invariant":14,"react":7,"fbjs/lib/ExecutionEnvironment":13,"object-assign":16,"fbjs/lib/emptyFunction":15,"fbjs/lib/getActiveElement":17,"fbjs/lib/shallowEqual":20,"fbjs/lib/containsNode":18,"fbjs/lib/emptyObject":19}],28:[function(require,module,exports) {
+},{"fbjs/lib/invariant":13,"react":4,"fbjs/lib/ExecutionEnvironment":18,"object-assign":12,"fbjs/lib/emptyFunction":15,"fbjs/lib/getActiveElement":19,"fbjs/lib/shallowEqual":20,"fbjs/lib/containsNode":22,"fbjs/lib/emptyObject":14}],30:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2444,7 +2444,7 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
-},{}],22:[function(require,module,exports) {
+},{}],26:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2481,7 +2481,7 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
-},{"./hyphenate":28}],29:[function(require,module,exports) {
+},{"./hyphenate":30}],29:[function(require,module,exports) {
 "use strict";
 
 /**
@@ -2511,7 +2511,7 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-},{}],23:[function(require,module,exports) {
+},{}],25:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2549,7 +2549,7 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
-},{"./camelize":29}],6:[function(require,module,exports) {
+},{"./camelize":29}],11:[function(require,module,exports) {
 /** @license React v16.3.2
  * react-dom.development.js
  *
@@ -19167,7 +19167,7 @@ if ('development' !== "production") {
     module.exports = reactDom;
   })();
 }
-},{"fbjs/lib/invariant":14,"react":7,"fbjs/lib/warning":21,"fbjs/lib/ExecutionEnvironment":13,"object-assign":16,"fbjs/lib/emptyFunction":15,"prop-types/checkPropTypes":24,"fbjs/lib/getActiveElement":17,"fbjs/lib/shallowEqual":20,"fbjs/lib/containsNode":18,"fbjs/lib/emptyObject":19,"fbjs/lib/hyphenateStyleName":22,"fbjs/lib/camelizeStyleName":23}],4:[function(require,module,exports) {
+},{"fbjs/lib/invariant":13,"react":4,"fbjs/lib/warning":17,"fbjs/lib/ExecutionEnvironment":18,"object-assign":12,"fbjs/lib/emptyFunction":15,"prop-types/checkPropTypes":21,"fbjs/lib/getActiveElement":19,"fbjs/lib/shallowEqual":20,"fbjs/lib/containsNode":22,"fbjs/lib/emptyObject":14,"fbjs/lib/hyphenateStyleName":26,"fbjs/lib/camelizeStyleName":25}],5:[function(require,module,exports) {
 'use strict';
 
 function checkDCE() {
@@ -19203,14 +19203,14 @@ if ('development' === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.production.min.js":5,"./cjs/react-dom.development.js":6}],12:[function(require,module,exports) {
+},{"./cjs/react-dom.production.min.js":10,"./cjs/react-dom.development.js":11}],16:[function(require,module,exports) {
 module.exports = {
   "navigator": "_navigator_1wu3l_1",
   "retain": "_retain_1wu3l_10",
   "about": "_about_1wu3l_19",
   "signout": "_signout_1wu3l_27"
 };
-},{}],8:[function(require,module,exports) {
+},{}],6:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19273,14 +19273,14 @@ var Navigator = function (_Component) {
 }(_react.Component);
 
 exports.default = Navigator;
-},{"react":7,"./Navigator.less":12}],39:[function(require,module,exports) {
+},{"react":4,"./Navigator.less":16}],32:[function(require,module,exports) {
 module.exports = {
   "article": "_article_1qp7w_1",
   "title": "_title_1qp7w_18",
   "note": "_note_1qp7w_25",
   "done": "_done_1qp7w_32"
 };
-},{}],38:[function(require,module,exports) {
+},{}],23:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19355,13 +19355,13 @@ var Pad = function (_Component) {
 }(_react.Component);
 
 exports.default = Pad;
-},{"react":7,"./Pad.less":39}],32:[function(require,module,exports) {
+},{"react":4,"./Pad.less":32}],31:[function(require,module,exports) {
 module.exports = {
   "article": "_article_1ejeg_1",
   "title": "_title_1ejeg_15",
   "note": "_note_1ejeg_22"
 };
-},{}],26:[function(require,module,exports) {
+},{}],33:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19374,9 +19374,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Note = require('./Note.less');
+var _NoteItem = require('./NoteItem.less');
 
-var _Note2 = _interopRequireDefault(_Note);
+var _NoteItem2 = _interopRequireDefault(_NoteItem);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19386,45 +19386,101 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Note = function (_Component) {
-    _inherits(Note, _Component);
+var NoteItem = function (_Component) {
+    _inherits(NoteItem, _Component);
 
-    function Note(props) {
-        _classCallCheck(this, Note);
+    function NoteItem(props) {
+        _classCallCheck(this, NoteItem);
 
-        return _possibleConstructorReturn(this, (Note.__proto__ || Object.getPrototypeOf(Note)).call(this, props));
+        return _possibleConstructorReturn(this, (NoteItem.__proto__ || Object.getPrototypeOf(NoteItem)).call(this, props));
     }
 
-    _createClass(Note, [{
+    _createClass(NoteItem, [{
         key: 'render',
         value: function render() {
-            if (!this.props.isSubmitted) {
-                return null;
-            }
             var title = this.props.title;
             var text = this.props.text;
             return _react2.default.createElement(
                 'article',
-                { className: _Note2.default.article },
+                { className: _NoteItem2.default.article },
                 _react2.default.createElement(
                     'label',
-                    { className: _Note2.default.title },
+                    { className: _NoteItem2.default.title },
                     title
                 ),
                 _react2.default.createElement(
                     'label',
-                    { className: _Note2.default.note },
+                    { className: _NoteItem2.default.note },
                     text
                 )
             );
         }
     }]);
 
-    return Note;
+    return NoteItem;
 }(_react.Component);
 
-exports.default = Note;
-},{"react":7,"./Note.less":32}],9:[function(require,module,exports) {
+exports.default = NoteItem;
+},{"react":4,"./NoteItem.less":31}],24:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _NoteList = require('./NoteList.less');
+
+var _NoteList2 = _interopRequireDefault(_NoteList);
+
+var _NoteItem = require('./NoteItem/NoteItem');
+
+var _NoteItem2 = _interopRequireDefault(_NoteItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NoteList = function (_Component) {
+    _inherits(NoteList, _Component);
+
+    function NoteList(props) {
+        _classCallCheck(this, NoteList);
+
+        return _possibleConstructorReturn(this, (NoteList.__proto__ || Object.getPrototypeOf(NoteList)).call(this, props));
+    }
+
+    _createClass(NoteList, [{
+        key: 'render',
+        value: function render() {
+            if (this.props.noteItems.length === 0) {
+                return null;
+            }
+            var noteItems = this.props.noteItems;
+            return _react2.default.createElement(
+                'ul',
+                null,
+                noteItems.map(function (note) {
+                    return _react2.default.createElement(_NoteItem2.default, { key: note.toString(), title: note.title, text: note.text });
+                })
+            );
+        }
+    }]);
+
+    return NoteList;
+}(_react.Component);
+
+exports.default = NoteList;
+},{"react":4,"./NoteList.less":31,"./NoteItem/NoteItem":33}],7:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -19441,9 +19497,9 @@ var _Pad = require("./Pad/Pad");
 
 var _Pad2 = _interopRequireDefault(_Pad);
 
-var _Note = require("./Note/Note");
+var _NoteList = require("./Note/NoteList");
 
-var _Note2 = _interopRequireDefault(_Note);
+var _NoteList2 = _interopRequireDefault(_NoteList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19464,7 +19520,7 @@ var Memo = function (_Component) {
         _this.handleNoteTitleChanged = _this.handleNoteTitleChanged.bind(_this);
         _this.handleNoteTextChanged = _this.handleNoteTextChanged.bind(_this);
         _this.handleNoteCreated = _this.handleNoteCreated.bind(_this);
-        _this.state = { title: '', text: '', isSubmitted: false };
+        _this.state = { title: '', text: '', noteItems: [] };
         return _this;
     }
 
@@ -19481,21 +19537,24 @@ var Memo = function (_Component) {
     }, {
         key: "handleNoteCreated",
         value: function handleNoteCreated(e) {
-            this.setState({ isSubmitted: true });
+            var noteItem = { title: this.state.title, text: this.state.text };
+            this.state.noteItems.push(noteItem);
+            this.setState({ noteItems: this.state.noteItems });
         }
     }, {
         key: "render",
         value: function render() {
             var title = this.state.title;
             var text = this.state.text;
-            var isSubmitted = this.state.isSubmitted;
+            var noteItems = this.state.noteItems;
+
             return _react2.default.createElement(
                 "div",
                 null,
                 _react2.default.createElement(_Pad2.default, { onTitleChanged: this.handleNoteTitleChanged,
                     onTextChanged: this.handleNoteTextChanged,
                     onNoteCreated: this.handleNoteCreated }),
-                _react2.default.createElement(_Note2.default, { title: title, text: text, isSubmitted: isSubmitted })
+                _react2.default.createElement(_NoteList2.default, { noteItems: noteItems })
             );
         }
     }]);
@@ -19504,7 +19563,7 @@ var Memo = function (_Component) {
 }(_react.Component);
 
 exports.default = Memo;
-},{"react":7,"./Pad/Pad":38,"./Note/Note":26}],3:[function(require,module,exports) {
+},{"react":4,"./Pad/Pad":23,"./Note/NoteList":24}],3:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -19558,7 +19617,7 @@ var App = function (_Component) {
 }(_react.Component);
 
 exports.default = App;
-},{"react":7,"./componet/navigator/Navigator":8,"./componet/memo/Memo":9}],2:[function(require,module,exports) {
+},{"react":4,"./componet/navigator/Navigator":6,"./componet/memo/Memo":7}],2:[function(require,module,exports) {
 'use strict';
 
 var _react = require('react');
@@ -19576,5 +19635,5 @@ var _App2 = _interopRequireDefault(_App);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById("app"));
-},{"react":7,"react-dom":4,"./App":3}]},{},[2])
+},{"react":4,"react-dom":5,"./App":3}]},{},[2])
 //# sourceMappingURL=/main.c6c0b856.map
