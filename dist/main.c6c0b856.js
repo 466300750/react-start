@@ -19316,6 +19316,7 @@ var Pad = function (_Component) {
         _this.handleClick = _this.handleClick.bind(_this);
         _this.handleTitleChanged = _this.handleTitleChanged.bind(_this);
         _this.handleTextChanged = _this.handleTextChanged.bind(_this);
+        _this.state = { title: '', text: '' };
         return _this;
     }
 
@@ -19323,16 +19324,19 @@ var Pad = function (_Component) {
         key: 'handleClick',
         value: function handleClick(e) {
             this.props.onNoteCreated(e);
+            this.setState({ title: '', text: '' });
         }
     }, {
         key: 'handleTextChanged',
         value: function handleTextChanged(e) {
             this.props.onTextChanged(e.target.value);
+            this.setState({ text: e.target.value });
         }
     }, {
         key: 'handleTitleChanged',
         value: function handleTitleChanged(e) {
             this.props.onTitleChanged(e.target.value);
+            this.setState({ title: e.target.value });
         }
     }, {
         key: 'render',
@@ -19340,8 +19344,8 @@ var Pad = function (_Component) {
             return _react2.default.createElement(
                 'article',
                 { className: _Pad2.default.article },
-                _react2.default.createElement('input', { className: _Pad2.default.title, placeholder: 'Title', onChange: this.handleTitleChanged }),
-                _react2.default.createElement('textarea', { className: _Pad2.default.note, placeholder: 'Take a Note', onChange: this.handleTextChanged }),
+                _react2.default.createElement('input', { className: _Pad2.default.title, placeholder: 'Title', onChange: this.handleTitleChanged, value: this.state.title }),
+                _react2.default.createElement('textarea', { className: _Pad2.default.note, placeholder: 'Take a Note', onChange: this.handleTextChanged, value: this.state.text }),
                 _react2.default.createElement(
                     'button',
                     { className: _Pad2.default.done, onClick: this.handleClick },
