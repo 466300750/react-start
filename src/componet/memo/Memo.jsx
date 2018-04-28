@@ -8,7 +8,7 @@ class Memo extends Component {
         this.handleNoteTitleChanged = this.handleNoteTitleChanged.bind(this);
         this.handleNoteTextChanged = this.handleNoteTextChanged.bind(this);
         this.handleNoteCreated = this.handleNoteCreated.bind(this);
-        this.state = {title:'', text:'', noteItems: []};
+        this.state = {title:'', text:'', noteItems: [], index:0};
     }
 
     handleNoteTitleChanged(tiltle) {
@@ -25,16 +25,19 @@ class Memo extends Component {
         this.setState({noteItems: this.state.noteItems});
     }
 
-    render() {
-        const title = this.state.title;
-        const text = this.state.text;
-        const noteItems = this.state.noteItems;
+    handleNoteCompleted(e, index) {
+        this.state.noteItems.splice(index, 1);
+        this.setState({noteItems: this.state.noteItems});
+    }
 
+    render() {
+        const noteItems = this.state.noteItems;
+        const index = this.state.index;
         return <div>
             <Pad onTitleChanged={this.handleNoteTitleChanged}
                  onTextChanged={this.handleNoteTextChanged}
                  onNoteCreated={this.handleNoteCreated}/>
-            <NoteList noteItems={noteItems}/>
+            <NoteList noteItems={noteItems} noteCompleted={this.handleNoteCompleted.bind(this, index)}/>
         </div>
     }
 }

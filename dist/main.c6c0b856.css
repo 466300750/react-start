@@ -101,7 +101,7 @@
   letter-spacing: 1px;
   margin-left: 20px;
 }
-._article_1ejeg_1 {
+._article_x3wm2_1 {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -112,20 +112,29 @@
   height: 141px;
   margin: 50px  auto auto;
 }
-._article_1ejeg_1 label {
+._article_x3wm2_1 label {
   border: none;
 }
-._title_1ejeg_15 {
+._title_x3wm2_15 {
   font-family: Roboto-Bold;
   font-size: 16px;
   color: rgba(145, 145, 145, 0.8);
   letter-spacing: 1px;
   margin-left: 20px;
 }
-._note_1ejeg_22 {
+._note_x3wm2_22 {
   font-family: PingFangTC-Medium;
   font-size: 16px;
   color: #B1B1B1;
+  letter-spacing: 1px;
+  margin-left: 20px;
+}
+._done_x3wm2_29 {
+  border: none;
+  background-color: gray;
+  font-family: PingFangTC-Medium;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
   letter-spacing: 1px;
   margin-left: 20px;
 }

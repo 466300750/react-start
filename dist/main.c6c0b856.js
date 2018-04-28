@@ -19365,6 +19365,13 @@ module.exports = {
   "title": "_title_1ejeg_15",
   "note": "_note_1ejeg_22"
 };
+},{}],35:[function(require,module,exports) {
+module.exports = {
+  "article": "_article_x3wm2_1",
+  "title": "_title_x3wm2_15",
+  "note": "_note_x3wm2_22",
+  "done": "_done_x3wm2_29"
+};
 },{}],33:[function(require,module,exports) {
 'use strict';
 
@@ -19400,10 +19407,16 @@ var NoteItem = function (_Component) {
     }
 
     _createClass(NoteItem, [{
+        key: 'handleClick',
+        value: function handleClick(e, index) {
+            this.props.noteCompleted(e, index);
+        }
+    }, {
         key: 'render',
         value: function render() {
             var title = this.props.title;
             var text = this.props.text;
+            var index = this.props.key;
             return _react2.default.createElement(
                 'article',
                 { className: _NoteItem2.default.article },
@@ -19416,6 +19429,11 @@ var NoteItem = function (_Component) {
                     'label',
                     { className: _NoteItem2.default.note },
                     text
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { className: _NoteItem2.default.done, onClick: this.handleClick.bind(this, index) },
+                    'COMPLETED'
                 )
             );
         }
@@ -19425,7 +19443,7 @@ var NoteItem = function (_Component) {
 }(_react.Component);
 
 exports.default = NoteItem;
-},{"react":4,"./NoteItem.less":31}],24:[function(require,module,exports) {
+},{"react":4,"./NoteItem.less":35}],24:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19466,15 +19484,21 @@ var NoteList = function (_Component) {
     _createClass(NoteList, [{
         key: 'render',
         value: function render() {
-            if (this.props.noteItems.length === 0) {
+            var _this2 = this;
+
+            var noteItems = this.props.noteItems;
+            if (noteItems.length === 0) {
                 return null;
             }
-            var noteItems = this.props.noteItems;
             return _react2.default.createElement(
                 'ul',
                 null,
                 noteItems.map(function (note) {
+<<<<<<< HEAD
                     return _react2.default.createElement(_NoteItem2.default, { key: note.toString(), title: note.title, text: note.text });
+=======
+                    return _react2.default.createElement(_NoteItem2.default, { key: note.index, title: note.title, text: note.text, noteCompleted: _this2.props.noteCompleted });
+>>>>>>> suyue: delete from todo list when click button.
                 })
             );
         }
@@ -19524,7 +19548,7 @@ var Memo = function (_Component) {
         _this.handleNoteTitleChanged = _this.handleNoteTitleChanged.bind(_this);
         _this.handleNoteTextChanged = _this.handleNoteTextChanged.bind(_this);
         _this.handleNoteCreated = _this.handleNoteCreated.bind(_this);
-        _this.state = { title: '', text: '', noteItems: [] };
+        _this.state = { title: '', text: '', noteItems: [], index: 0 };
         return _this;
     }
 
@@ -19546,19 +19570,23 @@ var Memo = function (_Component) {
             this.setState({ noteItems: this.state.noteItems });
         }
     }, {
+        key: "handleNoteCompleted",
+        value: function handleNoteCompleted(e, index) {
+            this.state.noteItems.splice(index, 1);
+            this.setState({ noteItems: this.state.noteItems });
+        }
+    }, {
         key: "render",
         value: function render() {
-            var title = this.state.title;
-            var text = this.state.text;
             var noteItems = this.state.noteItems;
-
+            var index = this.state.index;
             return _react2.default.createElement(
                 "div",
                 null,
                 _react2.default.createElement(_Pad2.default, { onTitleChanged: this.handleNoteTitleChanged,
                     onTextChanged: this.handleNoteTextChanged,
                     onNoteCreated: this.handleNoteCreated }),
-                _react2.default.createElement(_NoteList2.default, { noteItems: noteItems })
+                _react2.default.createElement(_NoteList2.default, { noteItems: noteItems, noteCompleted: this.handleNoteCompleted.bind(this, index) })
             );
         }
     }]);

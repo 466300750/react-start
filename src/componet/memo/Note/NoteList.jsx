@@ -8,13 +8,13 @@ class NoteList extends Component {
     }
 
     render() {
-        if (this.props.noteItems.length === 0) {
+        const noteItems = this.props.noteItems;
+        if (noteItems.length === 0) {
             return null;
         }
-        const noteItems = this.props.noteItems;
         return <ul>
             {noteItems.map((note) =>
-                <NoteItem key={note.toString()} title={note.title} text={note.text}/>
+                <NoteItem key={note.index} title={note.title} text={note.text} noteCompleted={this.props.noteCompleted}/>
             )}
         </ul>
     }
