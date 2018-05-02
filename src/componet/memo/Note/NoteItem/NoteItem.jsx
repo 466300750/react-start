@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import styles from './NoteItem.less'
+import Check from '../../../../asset/icons/check.svg'
 
 class NoteItem extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class NoteItem extends Component {
         return <article className={styles.article}>
             <label className={styles.title}>{title}</label>
             <label className={styles.note}>{text}</label>
-            <button className={styles.done} onClick={this.handleClick.bind(this, index)}>COMPLETED</button>
+            <img src={Check} className={styles.done} onClick={this.handleClick.bind(this, index)}/>
         </article>
     }
 }
