@@ -13,8 +13,8 @@ class NoteList extends Component {
             return null;
         }
         return <ul>
-            {noteItems.map((note) =>
-                <NoteItem key={note.index} title={note.title} text={note.text} noteCompleted={this.props.noteCompleted}/>
+            {noteItems.map((note, index) =>
+                <NoteItem key={index} title={note.title} text={note.text} noteCompleted={() => this.props.noteCompleted(index)}/>
             )}
         </ul>
     }
