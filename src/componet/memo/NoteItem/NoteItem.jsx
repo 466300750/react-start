@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styles from './NoteItem.less'
-import Check from '../../../../asset/icons/check.svg'
+import Check from '../../../asset/icons/check.svg'
 
 class NoteItem extends Component {
     render() {
